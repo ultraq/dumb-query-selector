@@ -20,6 +20,6 @@
 
     var id = !selector.contains(',') && (!selector.contains(' ') && selector.startsWith('#') || selector.contains(' ') && selector.substring(selector.lastIndexOf(' ')).contains('#'));
 
-    return id ? document.querySelector(selector) : Array.prototype.slice.call(scope.querySelectorAll(selector));
+    return id ? scope.querySelector(selector) : Array.prototype.slice.call(scope.querySelectorAll(selector));
   }
 });
