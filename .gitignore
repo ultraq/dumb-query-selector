@@ -1,5 +1,6 @@
 
 # Library and framework files/directories
+bower_components/
 node_modules/
 npm-debug.log
 

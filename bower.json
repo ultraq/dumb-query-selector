@@ -1,6 +1,6 @@
 {
 	"name": "dumb-query-selector",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A tiny selector function that returns either the matching node or an array of nodes (because NodeLists are dumb)",
 	"repository": {
 		"type": "git",
@@ -13,5 +13,9 @@
 		"README.md",
 		"Source",
 		"Tests"
-	]
+	],
+	"dependencies": {
+		"String.prototype.contains": "https://github.com/mathiasbynens/String.prototype.contains.git#0.2.0",
+		"String.prototype.startsWith": "https://github.com/mathiasbynens/String.prototype.startsWith.git#0.2.0"
+	}
 }
