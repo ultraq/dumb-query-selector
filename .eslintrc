@@ -1,0 +1,27 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"ecmaFeatures": {
+		"modules": true
+	},
+	"rules": {
+		"brace-style": [2, "stroustrup"],
+		"dot-notation": 0,
+		"global-strict": 0,	// Deprecated, remove when ESLint goes to 1.0.0
+		"key-spacing": 0,
+		"no-multi-spaces": 0,
+		"no-new": 0,
+		"no-trailing-spaces": 0,
+		"no-unused-vars": [2, { "args": "none" }],
+		"space-before-function-paren": [2, "never"],
+		"valid-jsdoc": [2, {
+			"prefer": {
+				"return": "return"
+			},
+			"requireParamDescription": false,
+			"requireReturn": false
+		}]
+	}
+}

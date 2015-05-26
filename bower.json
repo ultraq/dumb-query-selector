@@ -1,0 +1,15 @@
+{
+	"name": "dumb-query-selector",
+	"version": "1.0.0",
+	"description": "A tiny selector function that returns either the matching node or an array of nodes (because NodeLists are dumb)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ultraq/dumb-query-selector.git"
+	},
+	"main": [],
+	"ignore": [
+		"**/.*",
+		"README.md",
+		"Tests"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"name": "dumb-query-selector",
+	"version": "1.0.0",
+	"description": "A tiny selector function that returns either the matching node or an array of nodes (because NodeLists are dumb)",
+	"scripts": {
+		"lint": "gulp lint"
+	},
+	"devDependencies": {
+		"gulp": "~3.8.11",
+		"gulp-eslint": "~0.8.0"
+	}
+}
