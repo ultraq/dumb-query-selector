@@ -2,11 +2,18 @@
 	"name": "dumb-query-selector",
 	"version": "1.0.0",
 	"description": "A tiny selector function that returns either the matching node or an array of nodes (because NodeLists are dumb)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ultraq/dumb-query-selector.git"
+	},
 	"scripts": {
-		"lint": "gulp lint"
+		"lint": "gulp lint",
+		"build": "gulp"
 	},
 	"devDependencies": {
 		"gulp": "~3.8.11",
+		"gulp-babel": "~5.1.0",
+		"gulp-concat": "~2.5.2",
 		"gulp-eslint": "~0.8.0"
 	}
 }

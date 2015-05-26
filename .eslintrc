@@ -15,6 +15,7 @@
 		"no-new": 0,
 		"no-trailing-spaces": 0,
 		"no-unused-vars": [2, { "args": "none" }],
+		"quotes": [2, "single", "avoid-escape"],
 		"space-before-function-paren": [2, "never"],
 		"valid-jsdoc": [2, {
 			"prefer": {

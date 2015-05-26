@@ -6,10 +6,12 @@
 		"type": "git",
 		"url": "https://github.com/ultraq/dumb-query-selector.git"
 	},
-	"main": [],
+	"main": "dumbqueryselector.js",
 	"ignore": [
 		"**/.*",
+		"gulpfile.js",
 		"README.md",
+		"Source",
 		"Tests"
 	]
 }
