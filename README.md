@@ -35,7 +35,7 @@ so it's like using jQuery, but not :P  The examples below will use `$`.)
 ### $(query[, scope])
 
 A unified query selector, returning either the matching element (for ID queries)
-or an array of elements (for anything else) because `NodeList`s are dumb.
+or an array of elements (for anything else).
 
 ```javascript
 define('MyModule', ['DumbQuerySelector'], function($) {
@@ -65,7 +65,7 @@ match is found).
 Type: `Node`
 
 Optional node at which to restrict the search to, when the query is not a simple
-ID selector.  Useful for limiting the search area to a subset of the DOM.
+ID selector.  Defaults to `document` if not specified.
 
 
 Changelog
