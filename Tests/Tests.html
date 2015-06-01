@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>DumbQuerySelector - Tests</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../node_modules/mocha/mocha.css"/>
+</head>
+<body>
+	<!-- Test sandbox -->
+	<div id="test-box">
+		<div id="test-item1" class="test-item first"></div>
+		<div id="test-item2" class="test-item"></div>
+	</div>
+
+	<!-- Mocha scaffolding -->
+	<div id="mocha"></div>
+
+	<script src="../node_modules/mocha/mocha.js"></script>
+	<script src="../node_modules/chai/chai.js"></script>
+	<script src="../dumbqueryselector.js"></script>
+	<script>
+		mocha.setup('bdd');
+	</script>
+	<script src="DumbQuerySelector.js"></script>
+	<script>
+		if (window.mochaPhantomJS) {
+			mochaPhantomJS.run();
+		}
+		else {
+			mocha.run();
+		}
+	</script>
+</body>
+</html>
