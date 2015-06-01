@@ -38,6 +38,7 @@ A unified query selector, returning either the matching element (for ID queries)
 or an array of elements (for anything else).
 
 ```javascript
+// AMD example
 define('MyModule', ['DumbQuerySelector'], function($) {
 
   // Return matching element, use it directly
@@ -56,9 +57,8 @@ define('MyModule', ['DumbQuerySelector'], function($) {
 
 Type: `String`
 
-Your standard CSS selector.  If it's determined that the selector is a simple ID
-selector, then the return value will be the matching element (or `null` if no
-match is found).
+Your standard CSS selector.  If you're using a simple ID selector, then the
+return value will be the matching element (or `null` if no match is found).
 
 #### scope
 
