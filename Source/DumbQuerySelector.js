@@ -1,24 +1,23 @@
+
+// Regular expression for a single ID query
+const ID_SELECTOR_REGEX = /^#[a-zA-Z][\w-]*$/;
+
 /**
- * A unified query selector, determining which of the 2 native query selector
- * methods to use, and then mapping the result set to an array (if the query can
- * potentially be a list).
+ * A unified query selector, returning either the matching element (for ID
+ * queries) or an array of elements (for anything else) because `NodeList`s are
+ * dumb.
  * 
- * @param {String} selector
- * @param {Element} [scope] The scope to limit the search to.  Defaults to
- *                          document scope.
- * @return {Array} If `selector` is an ID selector, returns the single node if
- *                 a match is found, otherwise it returns an array of nodes
- *                 that match the given selector.
+ * @param {String} query
+ * @param {Node} [scope] The scope to limit the search to for non-ID queries.
+ *                       Defaults to document scope.
+ * @return {Element|Array} The matching element (or `null` if no match is found)
+ *                         or list of matching elements.
  * 
  * @author Emanuel Rabina
  */
-export default function $(selector, scope = document) {
+export default function $(query, scope = document) {
 
-	// Determine whether we can use the first match or list selector
-	var id = !selector.contains(',') &&
-		((!selector.contains(' ') && selector.startsWith('#')) ||
-		(selector.contains(' ') && selector.substring(selector.lastIndexOf(' ')).contains('#')));
-
-	return id ? scope.querySelector(selector) :
-		Array.prototype.slice.call(scope.querySelectorAll(selector));
+	return ID_SELECTOR_REGEX.test(query) ?
+		document.getElementById(query.substring(1)) :
+		Array.prototype.slice.call(scope.querySelectorAll(query));
 }
