@@ -1,12 +1,14 @@
 /**
  * Gulp configuration.
  */
+/* global require */
 'use strict';
 
 var gulp   = require('gulp');
 var babel  = require('gulp-babel');
 var concat = require('gulp-concat');
 var eslint = require('gulp-eslint');
+var mocha  = require('gulp-mocha-phantomjs');
 
 
 // JAVASCRIPT TASKS
@@ -14,6 +16,7 @@ var eslint = require('gulp-eslint');
 
 var js = {
 	sourceFiles: 'Source/**/*.js',
+	testFiles: 'Tests/Tests.html',
 	destFile: 'dumbqueryselector.js',
 	destDir: '.'
 };
@@ -32,15 +35,20 @@ gulp.task('javascript', ['lint'], function() {
 			moduleIds: true
 		}))
 		.pipe(concat(js.destFile))
-		.pipe(gulp.dest(js.destDir))
+		.pipe(gulp.dest(js.destDir));
+});
+
+gulp.task('test', function() {
+	return gulp.src(js.testFiles)
+		.pipe(mocha());
 });
 
 
 // TASKS ALIASES
 // -----------------------------------------------------------------------------
 
-gulp.task('watch', ['javascript'], function() {
-	gulp.watch(js.sourceFiles, ['javascript']);
+gulp.task('watch', ['javascript', 'test'], function() {
+	gulp.watch(js.sourceFiles, ['javascript', 'test']);
 });
 
 gulp.task('default', ['javascript']);
