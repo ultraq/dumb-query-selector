@@ -1,6 +1,6 @@
 {
 	"name": "dumb-query-selector",
-	"description": "A tiny selector function that returns either the matching node or an array of nodes (because NodeLists are dumb)",
+	"description": "Shortcuts to the querySelector(All) functions, the (All) instead returning an array of nodes (because NodeLists are dumb)",
 	"authors": [
 		"Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)"
 	],

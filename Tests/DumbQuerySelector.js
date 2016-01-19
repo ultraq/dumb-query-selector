@@ -7,30 +7,34 @@
 describe('DumbQuerySelector', function() {
 	'use strict';	// eslint-disable-line
 
-	var $ = DumbQuerySelector;
 	var assert = chai.assert;
 
 
-	describe('ID queries', function() {
+	describe('$', function() {
+		var $ = DumbQuerySelector.$;
 
-		it('Should return a single result for an ID query', function() {
-			var result = $('#test-box');
-			assert.isNotNull(result, 'Could not locate #test-box element');
+		it('Should return a single result', function() {
+			var result = $('.test-item');
+			assert.isNotNull(result);
 			assert.isNotArray(result);
 		});
 	});
 
 
-	describe('List queries', function() {
+	describe('$$', function() {
+		var $$ = DumbQuerySelector.$$;
 
-		it('Should return a list for multiple ID queries', function() {
-			var result = $('#test-box, #test-item1');
+		it('Should return an array', function() {
+			var result = $$('.test-item');
+			assert.isNotNull(result);
 			assert.isArray(result);
+			assert.strictEqual(result.length, 2);
 		});
 
-		it('Should return a list for class queries', function() {
-			var result = $('.first');
+		it('Should return an empty array when there are no matches', function() {
+			var result = $$('.lols');
 			assert.isArray(result);
+			assert.strictEqual(result.length, 0);
 		});
 	});
 });

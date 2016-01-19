@@ -1,7 +1,7 @@
 {
 	"name": "dumb-query-selector",
-	"version": "1.1.0",
-	"description": "A tiny selector function that returns either the matching node or an array of nodes (because NodeLists are dumb)",
+	"version": "2.0.0",
+	"description": "Shortcuts to the querySelector(All) functions, the (All) instead returning an array of nodes (because NodeLists are dumb)",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
 	"repository": {
@@ -9,16 +9,16 @@
 		"url": "https://github.com/ultraq/dumb-query-selector.git"
 	},
 	"scripts": {
-		"lint": "node_modules/gulp/bin/gulp.js lint",
-		"test": "node_modules/gulp/bin/gulp.js test",
-		"build": "node_modules/gulp/bin/gulp.js"
+		"lint": "gulp lint",
+		"test": "gulp test",
+		"build": "gulp"
 	},
 	"devDependencies": {
 		"chai": "2.x",
 		"gulp": "~3.8.11",
 		"gulp-babel": "~5.1.0",
 		"gulp-concat": "~2.5.2",
-		"gulp-eslint": "~0.8.0",
+		"gulp-eslint": "^1.1.1",
 		"gulp-mocha-phantomjs": "~0.10.1",
 		"mocha": "2.x"
 	}

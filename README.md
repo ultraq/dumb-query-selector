@@ -4,11 +4,11 @@ Dumb Query Selector
 
 [![Build Status](https://travis-ci.org/ultraq/dumb-query-selector.svg?branch=master)](https://travis-ci.org/ultraq/dumb-query-selector)
 
-A tiny selector function that returns either the matching element or an array of
-elements (because `NodeList`s are dumb).
+Shortcuts to the `querySelector(All)` functions, the `(All)` instead returning
+an array of nodes (because `NodeList`s are dumb).
 
- - Current version: 1.1.0
- - Released: 1 June 2015
+ - Current version: 2.0.0
+ - Released: 19 Jan 2016
 
 
 Installation
@@ -27,49 +27,44 @@ Or download the raw version of the compiled file,
 Usage
 -----
 
-This project exports a single function via [UMD](https://github.com/umdjs/umd),
-so is available to you through a variety of different module loaders, either as
-`DumbQuerySelector` or the name of the file.  (Often I alias the import to `$`,
-so it's like using jQuery, but not :P  The examples below will use `$`.)
+This project exports 2 functions via [UMD](https://github.com/umdjs/umd), `$`
+and `$$`, and is available to you through a variety of different module loaders.
 
-### $(query[, scope])
-
-A unified query selector, returning either the matching element (for ID queries)
-or an array of elements (for anything else).
+The first, `$`, returns a single node, whereas `$$` returns an array of nodes.
 
 ```javascript
-// AMD example
-define('MyModule', ['DumbQuerySelector'], function($) {
+// ES6 example
+import { $, $$ } from 'dumb-query-selector';
 
-  // Return matching element, use it directly
-  var result = $('#some-id');
-  var blah = result.getAttribute('data-blah');
+// Return matching element, use it directly
+var result = $('#some-id');
+var blah = result.getAttribute('data-blah');
 
-  // Return array of matching elements, allowing the use of array functions
-  var results = $('.some-classes');
-  results.forEach(function(result) {
-    // ...
-  });
+// Return array of matching elements, allowing the use of array functions
+var results = $('.some-classes');
+results.forEach(result => {
+// ...
 });
 ```
 
-#### query
+Both functions take up to 2 arguments:
 
-Type: `String`
+ - **query**
+   Type: `String`  
+   A standard CSS selector.
 
-Your standard CSS selector.  If you're using a simple ID selector, then the
-return value will be the matching element (or `null` if no match is found).
-
-#### scope
-
-Type: `Node`
-
-Optional node at which to restrict the search to, when the query is not a simple
-ID selector.  Defaults to `document` if not specified.
+ - **scope**
+   Type: `Node`  
+   Optional context on which to invoke the function.  Defaults to `document` if
+   not specified.
 
 
 Changelog
 ---------
+
+### 2.0.0
+ - Now exports as 2 functions, `$` and `$$` to make it easier to know the return
+   type.
 
 ### 1.1.0
  - Speed improvements (use a regular expression to test for ID queries, use
