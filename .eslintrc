@@ -11,6 +11,7 @@
 		"brace-style": [2, "stroustrup"],
 		"no-unused-vars": [2, { "args": "none" }],
 		"quotes": [2, "single", "avoid-escape"],
+		"semi": 2,
 		"space-before-function-paren": [2, "never"],
 		"valid-jsdoc": [2, {
 			"prefer": {

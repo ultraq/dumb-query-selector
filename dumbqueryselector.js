@@ -21,13 +21,11 @@
 
   function $(query) {
     var scope = arguments.length <= 1 || arguments[1] === undefined ? document : arguments[1];
-
     return scope.querySelector(query);
   }
 
   function $$(query) {
     var scope = arguments.length <= 1 || arguments[1] === undefined ? document : arguments[1];
-
     return Array.prototype.slice.call(scope.querySelectorAll(query));
   }
 });

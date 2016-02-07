@@ -14,8 +14,6 @@
 		"Source",
 		"Tests",
 		"**/.*",
-		"gulpfile.js",
-		"package.json",
-		"README.md"
+		"package.json"
 	]
 }
