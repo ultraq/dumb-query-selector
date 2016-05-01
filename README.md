@@ -3,12 +3,12 @@ Dumb Query Selector
 ===================
 
 [![Build Status](https://travis-ci.org/ultraq/dumb-query-selector.svg?branch=master)](https://travis-ci.org/ultraq/dumb-query-selector)
+[![GitHub Release](https://img.shields.io/github/release/ultraq/dumb-query-selector.svg?maxAge=3600)](https://github.com/ultraq/dumb-query-selector/releases/latest)
+[![Bower](https://img.shields.io/bower/v/dumb-query-selector.svg?maxAge=3600)](http://bower.io/search/?q=dumb-query-selector)
+[![License](https://img.shields.io/github/license/ultraq/thymeleaf-testing-junit.svg?maxAge=2592000)](https://github.com/ultraq/thymeleaf-testing-junit/blob/master/LICENSE.txt)
 
 Shortcuts to the `querySelector(All)` functions, the `(All)` instead returning
 an array of nodes (because `NodeList`s are dumb).
-
- - Current version: 2.0.0
- - Released: 19 Jan 2016
 
 
 Installation
@@ -17,7 +17,7 @@ Installation
 Via Bower:
 
 ```
-bower install dumb-query-selector
+bower install dumb-query-selector --save
 ```
 
 Or download the raw version of the compiled file,
@@ -41,9 +41,9 @@ var result = $('#some-id');
 var blah = result.getAttribute('data-blah');
 
 // Return array of matching elements, allowing the use of array functions
-var results = $('.some-classes');
+var results = $$('.some-classes');
 results.forEach(result => {
-// ...
+  // ...
 });
 ```
 
