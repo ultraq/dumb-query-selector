@@ -3,7 +3,6 @@ Dumb Query Selector
 ===================
 
 [![Build Status](https://travis-ci.org/ultraq/dumb-query-selector.svg?branch=master)](https://travis-ci.org/ultraq/dumb-query-selector)
-[![GitHub Release](https://img.shields.io/github/release/ultraq/dumb-query-selector.svg?maxAge=3600)](https://github.com/ultraq/dumb-query-selector/releases/latest)
 [![Bower](https://img.shields.io/bower/v/dumb-query-selector.svg?maxAge=3600)](http://bower.io/search/?q=dumb-query-selector)
 [![License](https://img.shields.io/github/license/ultraq/thymeleaf-testing-junit.svg?maxAge=2592000)](https://github.com/ultraq/thymeleaf-testing-junit/blob/master/LICENSE.txt)
 
