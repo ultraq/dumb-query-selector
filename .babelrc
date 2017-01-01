@@ -1,5 +1,4 @@
 {
-	"comments": false,
 	"moduleId": "DumbQuerySelector",
 	"plugins": [
 		"transform-es2015-modules-umd"

@@ -32,15 +32,14 @@ and `$$`, and is available to you through a variety of different module loaders.
 The first, `$`, returns a single node, whereas `$$` returns an array of nodes.
 
 ```javascript
-// ES6 example
-import { $, $$ } from 'dumb-query-selector';
+import {$, $$} from 'dumb-query-selector';
 
 // Return matching element, use it directly
-var result = $('#some-id');
-var blah = result.getAttribute('data-blah');
+let result = $('#some-id');
+let blah = result.getAttribute('data-blah');
 
 // Return array of matching elements, allowing the use of array functions
-var results = $$('.some-classes');
+let results = $$('.some-classes');
 results.forEach(result => {
   // ...
 });
