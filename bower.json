@@ -10,6 +10,10 @@
 		"url": "https://github.com/ultraq/dumb-query-selector.git"
 	},
 	"main": "dumbqueryselector.js",
+	"moduleType": [
+		"globals",
+		"amd"
+	],
 	"ignore": [
 		"Source",
 		"Tests",
