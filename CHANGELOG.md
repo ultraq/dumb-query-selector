@@ -2,6 +2,11 @@
 Changelog
 =========
 
+### 2.1.0
+ - Included `main` entry in `package.json` so it can be used via npm.
+ - Swapped out mocha-phantomjs for jsdom (didn't need full browser environment
+   for tests anyway).
+
 ### 2.0.0
  - Now exports as 2 functions, `$` and `$$` to make it easier to know the return
    type.
