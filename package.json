@@ -1,6 +1,6 @@
 {
 	"name": "dumb-query-selector",
-	"version": "2.1.0",
+	"version": "3.0.0",
 	"description": "Shortcuts to the querySelector(All) functions, the (All) instead returning an array of nodes (because NodeLists are dumb)",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
@@ -11,7 +11,7 @@
 	"main": "dumb-query-selector.js",
 	"scripts": {
 		"lint": "eslint **/*.js",
-		"test": "mocha --require babel-register"
+		"test": "npm run lint && mocha --require babel-register"
 	},
 	"devDependencies": {
 		"babel-plugin-transform-es2015-modules-umd": "^6.4.3",
