@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import {$,$$} from '../Source/DumbQuerySelector.js';
+import {$,$$} from '../dumb-query-selector.js';
 
 import {assert} from 'chai';
 import {jsdom}  from 'jsdom';
@@ -24,7 +24,6 @@ import {jsdom}  from 'jsdom';
  * 
  * @author Emanuel Rabina
  */
-/* global global, describe, before, it */
 describe('DumbQuerySelector', function() {
 
 	// Use JSDOM to mock a DOM environment
