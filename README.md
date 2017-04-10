@@ -3,8 +3,8 @@ Dumb Query Selector
 ===================
 
 [![Build Status](https://travis-ci.org/ultraq/dumb-query-selector.svg?branch=master)](https://travis-ci.org/ultraq/dumb-query-selector)
-[![Bower](https://img.shields.io/bower/v/dumb-query-selector.svg?maxAge=3600)](http://bower.io/search/?q=dumb-query-selector)
-[![License](https://img.shields.io/github/license/ultraq/thymeleaf-testing-junit.svg?maxAge=2592000)](https://github.com/ultraq/thymeleaf-testing-junit/blob/master/LICENSE.txt)
+[![GitHub Release](https://img.shields.io/github/release/ultraq/dumb-query-selector.svg?maxAge=3600)](https://github.com/ultraq/dumb-query-selector/releases/latest)
+[![License](https://img.shields.io/github/license/ultraq/dumb-query-selector.svg?maxAge=2592000)](https://github.com/ultraq/dumb-query-selector/blob/master/LICENSE.txt)
 
 Shortcuts to the `querySelector(All)` functions, the `(All)` instead returning
 an array of nodes (because `NodeList`s are dumb).
@@ -20,7 +20,7 @@ bower install dumb-query-selector --save
 ```
 
 Or download the raw version of the compiled file,
-[dumbqueryselector.js](https://github.com/ultraq/dumb-query-selector/blob/master/dumbqueryselector.js).
+[dumb-query-selector.js](https://github.com/ultraq/dumb-query-selector/blob/master/dumb-query-selector.js).
 
 
 Usage

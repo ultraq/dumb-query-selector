@@ -16,8 +16,7 @@
 		"node"
 	],
 	"ignore": [
-		"Source",
-		"Tests",
+		"test",
 		"**/.*",
 		"package.json"
 	]
