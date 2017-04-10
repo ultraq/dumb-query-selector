@@ -20,7 +20,7 @@ bower install dumb-query-selector --save
 ```
 
 Or download the raw version of the compiled file,
-[dumb-query-selector.js](https://github.com/ultraq/dumb-query-selector/blob/master/dumb-query-selector.js).
+[dumb-query-selector.js](https://raw.githubusercontent.com/ultraq/dumb-query-selector/master/dumb-query-selector.js).
 
 
 Usage
