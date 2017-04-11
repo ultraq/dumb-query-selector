@@ -6,6 +6,7 @@ Changelog
  - Fixed the expected behaviour when used as without a module loader, which is
    to put `$` and `$$` on the global namespace.  That's a change for consumers
    though, so... major version bump!
+ - Made this module available on npm: https://www.npmjs.com/package/dumb-query-selector
 
 ### 2.1.0
  - Included `main` entry in `package.json` so it can be used via npm.
