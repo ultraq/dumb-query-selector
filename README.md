@@ -19,8 +19,14 @@ Via Bower:
 bower install dumb-query-selector --save
 ```
 
-Or download the raw version of the compiled file,
-[dumb-query-selector.js](https://raw.githubusercontent.com/ultraq/dumb-query-selector/master/dumb-query-selector.js).
+Via NPM:
+
+```
+npm install dumb-query-selector --save
+```
+
+Since this project is only 1 script, you can also download the script to your
+project if you prefer: [dumb-query-selector.js](https://raw.githubusercontent.com/ultraq/dumb-query-selector/master/dumb-query-selector.js).
 
 
 Usage
@@ -28,6 +34,8 @@ Usage
 
 This project exports 2 functions via [UMD](https://github.com/umdjs/umd), `$`
 and `$$`, and is available to you through a variety of different module loaders.
+If used in the browser outside of a module environment, then both functions are
+available globally.
 
 The first, `$`, returns a single node, whereas `$$` returns an array of nodes.
 
