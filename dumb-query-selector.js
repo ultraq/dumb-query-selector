@@ -26,7 +26,7 @@
 	}
 	// Global
 	else {
-		var dumbQuerySelector = factory();
+		let dumbQuerySelector = factory();
 		Object.keys(dumbQuerySelector).forEach(function(key) {
 			root[key] = dumbQuerySelector[key];
 		});
