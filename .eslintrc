@@ -1,5 +1,8 @@
 {
-	"extends": "eslint:recommended",
+	"extends": [
+		"eslint:recommended",
+		"ultraq"
+	],
 	"parserOptions": {
 		"ecmaVersion": 6
 	},
@@ -10,18 +13,6 @@
 		"amd": true
 	},
 	"rules": {
-		"brace-style": ["error", "stroustrup"],
-		"no-unused-vars": ["error", { "args": "none" }],
-		"quotes": ["error", "single", "avoid-escape"],
-		"semi": "error",
-		"space-before-function-paren": ["error", "never"],
-		"strict": ["error", "function"],
-		"valid-jsdoc": ["error", {
-			"prefer": {
-				"return": "return"
-			},
-			"requireParamDescription": false,
-			"requireReturn": false
-		}]
+		"strict": ["error", "function"]
 	}
 }
