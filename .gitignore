@@ -1,9 +1,5 @@
-
-# Library and framework files/directories
-bower_components/
-node_modules/
+/.idea
+/.nyc_output
+/node_modules
 npm-debug.log
-
-# IntelliJ IDEA / WebStorm
 *.iml
-*.idea

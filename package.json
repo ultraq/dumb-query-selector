@@ -11,15 +11,18 @@
 	"main": "dumb-query-selector.js",
 	"scripts": {
 		"lint": "eslint '**/*.js'",
-		"test": "npm run lint && mocha --require babel-register"
+		"test": "npm run lint --silent && nyc mocha --require babel-register",
+		"coverage": "nyc report --reporter=text-lcov | coveralls"
 	},
 	"devDependencies": {
 		"babel-plugin-transform-es2015-modules-umd": "^6.4.3",
 		"babel-register": "^6.24.1",
 		"chai": "^3.5.0",
+		"coveralls": "^2.13.1",
 		"eslint": "^3.12.2",
 		"eslint-config-ultraq": "^1.0.0",
 		"jsdom": "^9.9.0",
-		"mocha": "^3.2.0"
+		"mocha": "^3.2.0",
+		"nyc": "^10.3.2"
 	}
 }
