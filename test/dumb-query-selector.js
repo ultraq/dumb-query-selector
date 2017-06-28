@@ -49,6 +49,12 @@ describe('DumbQuerySelector', function() {
 			assert.isNotNull(result);
 			assert.isNotArray(result);
 		});
+
+		it('Custom scope', function() {
+			let scope = $('#test-item2');
+			let result = $('.test-item', scope);
+			assert.isNull(result);
+		});
 	});
 
 
@@ -63,7 +69,14 @@ describe('DumbQuerySelector', function() {
 		it('Should return an empty array when there are no matches', function() {
 			let result = $$('.lols');
 			assert.isArray(result);
-			assert.strictEqual(result.length, 0);
+			assert.isEmpty(result);
+		});
+
+		it('Custom scope', function() {
+			let scope = $('#test-item2');
+			let result = $$('div', scope);
+			assert.isArray(result);
+			assert.isEmpty(result);
 		});
 	});
 });
