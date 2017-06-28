@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import {$,$$} from '../dumb-query-selector.js';
+import {$, $$} from '../src/dumb-query-selector.js';
 
 import {assert} from 'chai';
 import {jsdom}  from 'jsdom';
