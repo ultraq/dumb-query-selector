@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+/* eslint-env mocha */
 import {$, $$} from '../src/dumb-query-selector.js';
 
 import {assert} from 'chai';
