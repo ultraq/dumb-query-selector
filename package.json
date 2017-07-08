@@ -1,6 +1,6 @@
 {
 	"name": "dumb-query-selector",
-	"version": "3.1.0",
+	"version": "3.2.0",
 	"description": "Shortcuts to the querySelector(All) functions, the (All) instead returning an array of nodes (because NodeLists are dumb)",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
