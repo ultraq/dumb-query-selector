@@ -2,6 +2,13 @@
 Changelog
 =========
 
+### 3.2.0
+ - Exclude `.babelrc` from published module so that dependants using the module
+   build don't need to includ the es2015 babel preset when building.
+
+### 3.1.0
+ - Expose the source modules for ES6-aware module bundlers
+
 ### 3.0.0
  - Fixed the expected behaviour when used as without a module loader, which is
    to put `$` and `$$` on the global namespace.  That's a change for consumers
