@@ -9,15 +9,18 @@
 		"type": "git",
 		"url": "https://github.com/ultraq/dumb-query-selector.git"
 	},
+	"keywords": [
+		"query",
+		"selector",
+		"array"
+	],
 	"main": "dumb-query-selector.js",
-	"module": "src/dumb-query-selector.js",
 	"moduleType": [
 		"globals",
 		"amd",
 		"node"
 	],
 	"ignore": [
-		"test",
 		"**/.*",
 		"package.json"
 	]

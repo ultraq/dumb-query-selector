@@ -1,7 +1,2 @@
-/.idea
-/.nyc_output
-/coverage
-/test
-*.iml
 .*
 bower.json
