@@ -77,10 +77,4 @@ describe('dumb-query-selector', function() {
 		});
 	});
 
-	// describe('Module loader tests', function() {
-	//
-	// 	test('CommonJS', function() {
-	//		
-	// 	});
-	// });
 });
