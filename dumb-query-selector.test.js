@@ -15,6 +15,8 @@
  */
 /* eslint-env es6, jest */
 /* eslint-disable strict */
+const {$, $$} = require('./dumb-query-selector.js');
+const {JSDOM} = require('jsdom');
 
 /**
  * Tests for the query selector.
@@ -23,58 +25,39 @@
  */
 describe('dumb-query-selector', function() {
 
-	beforeAll(function() {
-		document.body.insertAdjacentHTML('beforeend', `
-			<div id="test-sandbox">
-				<div id="test-item1" class="test-item first"></div>
-				<div id="test-item2" class="test-item"></div>
-			</div>
-		`);
-	});
-	afterAll(function() {
-		document.getElementById('test-sandbox').remove();
-	});
-
-
 	describe('$', function() {
-		const {$} = require('./dumb-query-selector');
 
-		test('Should return a single result', function() {
-			let result = $('.test-item');
-			expect(result).not.toBeNull();
-			expect(result).not.toBeArray();
-		});
+		test('Should return a single DOM node', function() {
+			let doc = new JSDOM(`
+				<div>
+					<div id="test-item1" class="test-item"></div>
+					<div id="test-item2" class="test-item"></div>
+				</div>
+			`).window.document;
 
-		test('Custom scope', function() {
-			let scope = document.getElementById('test-item2');
-			let result = $('.test-item', scope);
-			expect(result).toBeNull();
+			let result = $('.test-item', doc);
+			expect(result.nodeType).toBe(Node.ELEMENT_NODE);
 		});
 	});
-
 
 	describe('$$', function() {
-		const {$$} = require('./dumb-query-selector');
 
 		test('Should return an array', function() {
-			let result = $$('.test-item');
-			expect(result).not.toBeNull();
-			expect(result).toBeArray();
+			let doc = new JSDOM(`
+				<div>
+					<div id="test-item1" class="test-item"></div>
+					<div id="test-item2" class="test-item"></div>
+				</div>
+			`).window.document;
+			let result = $$('.test-item', doc);
+			expect(Array.isArray(result)).toBe(true);
 			expect(result).toHaveLength(2);
 		});
 
 		test('Should return an empty array when there are no matches', function() {
 			let result = $$('.lols');
-			expect(result).toBeArray();
-			expect(result).toHaveLength(0);
-		});
-
-		test('Custom scope', function() {
-			let scope = document.getElementById('test-item2');
-			let result = $$('div', scope);
-			expect(result).toBeArray();
+			expect(Array.isArray(result)).toBe(true);
 			expect(result).toHaveLength(0);
 		});
 	});
-
 });

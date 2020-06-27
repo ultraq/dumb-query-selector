@@ -9,7 +9,6 @@
 		"node": true
 	},
 	"rules": {
-		"strict": ["error", "function"],
-		"no-var": "off"
+		"strict": ["error", "function"]
 	}
 }

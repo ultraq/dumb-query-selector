@@ -26,7 +26,7 @@
 	}
 	// Global
 	else {
-		var dumbQuerySelector = factory();
+		var dumbQuerySelector = factory(); // eslint-disable-line no-var
 		Object.keys(dumbQuerySelector).forEach(function(key) {
 			root[key] = dumbQuerySelector[key];
 		});

@@ -15,8 +15,8 @@
 	],
 	"main": "dumb-query-selector.js",
 	"scripts": {
-		"lint": "eslint '*.js'",
-		"test": "npm run lint && jest",
+		"lint": "eslint \"*.js\"",
+		"test": "jest",
 		"coverage": "cat ./coverage/lcov.info | coveralls"
 	},
 	"devDependencies": {
