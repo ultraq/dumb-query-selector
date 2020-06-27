@@ -2,6 +2,9 @@
 Changelog
 =========
 
+### 3.3.0
+ - Fix `$` and `$$` not being put on the global object in `<script>` mode.
+
 ### 3.2.0
  - Exclude `.babelrc` from published module so that dependants using the module
    build don't need to includ the es2015 babel preset when building.
